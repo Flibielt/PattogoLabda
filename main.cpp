@@ -22,6 +22,7 @@ main (void)
         struct winsize w;
         ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
         int mx = (w.ws_col - 1) * 2, my = w.ws_row * 2 - 1;
+        //mx: a terminál hossza, my: a terminál magassága
 
         xj = (xj - 1) % mx;
         xk = (xk + 1) % mx;
