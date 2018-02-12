@@ -31,13 +31,20 @@ main (void)
         yk = (yk + 1) % my;
 
         clear ();
-
+        
+        //vízszintes sorok
         for(int j = 0; j <= mx / 2; j++)
         {
             mvprintw (0, j, "-");
             mvprintw (my / 2, j,"-");
         }
-
+        
+        //föggőleges sorok
+        for(int j = 1; j <= my / 2 -1; j++)
+        {
+            mvprintw(j, 0, "|");
+            mvprintw(j, mx / 2, "|");
+        }
 
         mvprintw (abs ((yj + (my - yk)) / 2),
                   abs ((xj + (mx - xk)) / 2), "O");
